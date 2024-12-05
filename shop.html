@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSP Shoping</title>
+    <link rel="icon" href="ImgToolShopPage/iconLogoMSP.png" />
+    <link rel="stylesheet" href="shop.css" />
+    <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
+    <script lang="javascript" src="shop.js"></script>
+  </head>
+  <body>
+    <div id="scanner" style="text-align: center; display: none">
+      <div id="scanner-container"></div>
+      <input
+        onclick="stopScaner()"
+        type="button"
+        id="stopScanButton"
+        value="Stop the scanner"
+      />
+    </div>
+    <div class="home" id="shopCart">
+      <header>
+        <div class="header">
+          <a href="#" class="logo"
+            ><img src="ImgToolShopPage/iconLogoMSP.png" alt="CSS Header"
+          /></a>
+          <div class="header-right">
+            <button class="login-button">Войти</button>
+          </div>
+        </div>
+      </header>
+      <section id="productList" class="product-list"></section>
+      <footer>
+        <div class="footer">
+          <div class="inlineFooter">
+            <div class="exitFooter">
+              <button class="exitButton">Выйти</button>
+            </div>
+            <div class="toPay">
+              <div class="totalToPayPrise">
+                <div id="totalPrice">Итого: ₽ 0</div>
+              </div>
+              <a
+                href="https://id.tbank.ru/auth/step?cid=ar61hMDUoTvR"
+                onclick="goToPayPage(); return false;"
+              >
+                <button class="payButton">Оплатить</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <button id="scanButton" class="scanButton">
+          <img src="ImgToolShopPage/qr-code.svg" alt="" />
+        </button>
+        <section>
+          <div class="underAll"></div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>
