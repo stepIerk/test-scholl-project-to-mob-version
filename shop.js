@@ -108,7 +108,7 @@ function startScanner() {
             console.log(barcode);
             stopScaner();
             scanProducts(barcode);
-            scannerElem.setAttribute("hidden", "true");
+
             Quagga.stop()
             return;
             
